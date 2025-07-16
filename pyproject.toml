@@ -1,0 +1,18 @@
+[project]
+name = "gh-actions-playground"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.2.4",
+]
+
+[dependency-groups]
+dev = ["django-stubs>=5.2.1", "pyright>=1.1.403", "ruff>=0.12.3"]
+
+[tool.pyright]
+pythonVersion = "3.13"
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"
