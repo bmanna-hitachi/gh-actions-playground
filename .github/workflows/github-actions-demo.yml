@@ -1,0 +1,18 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GHA
+on: [push]
+jobs:
+  explore-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "* the job was automatically triggered by ${{ github.event_name }}"
+      - run: echo "* this job is no running on a ${{ github.os }} server hosted on GH!"
+      - run: echo "* repo=${{ github.repository }}, branch=${{ github.ref }}"
+      - name: checkout repo code
+        uses: actions/checkout@v4
+      - run: echo "* the repo(${{ github.repository }}) has been cloned successfully"
+      - run: echo "* the workflow is now ready to run in the runner..."
+      - name:
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "* this job's status is ${{ github.status }}"
