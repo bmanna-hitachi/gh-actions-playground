@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
       - run: echo "* the repo(${{ github.repository }}) has been cloned successfully"
       - run: echo "* the workflow is now ready to run in the runner..."
-      - name:
+      - name: running the actions
         run: |
           ls ${{ github.workspace }}
       - run: echo "* this job's status is ${{ github.status }}"
